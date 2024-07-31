@@ -71,6 +71,9 @@ input_df = pd.DataFrame(data, index=[0])
 full_df = pd.concat([input_df,X], axis=0)
 # add these two to expander later
 
+# this will hold the encoded verios of the X features without the input features row
+X_encoded = full_df[1:]
+
 # Encode X
 # encoding since some data is String -> convert categorical to numberic using - dummies
 encode = ['island', 'sex']
@@ -109,12 +112,11 @@ with st.expander('**Data Preparation**'):
     st.write('**Encoded Y / Target values**')
     Y_encoded
 
-
+X_encoded
 # Model Training - Traing the model -> apply the model to make predictions
 # Initializing the classifier model
 clf = RandomForestClassifier()
 # remove row 1 from the full_df -> since it includes the input features
-X_encoded = full_df[1:]
 # fit the train and test sets .. which are X and Y respectively
 clf.fit(X_encoded,Y_encoded)
 

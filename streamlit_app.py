@@ -110,7 +110,7 @@ with st.expander('**Data Preparation**'):
     st.write('**Encoded Y / Target values**')
     Y_encoded
 
-X_train
+# X_train
 # Model Training - Traing the model -> apply the model to make predictions
 # initialize a RandomForestClassifier object named clf
 clf = RandomForestClassifier()

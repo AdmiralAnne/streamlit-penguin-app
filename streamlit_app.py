@@ -31,5 +31,6 @@ with st.expander('**Data**'):
     Y
 
 with st.expander('**Data Visualization**'):
+    st.write('body mass vs bill length')
     # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
     st.scatter_chart(data=df, x="bill_length_mm", y="body_mass_g", x_label="bill_length", y_label="body_mass", color='species', size=None, width=None, height=None, use_container_width=True)

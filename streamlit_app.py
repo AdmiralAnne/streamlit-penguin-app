@@ -120,8 +120,10 @@ clf.fit(X_train,Y_encoded)
 # Making Predictions
 # make predictions on a subset of full_df -> in this case -> our input features, which are encoded
 predict = clf.predict(full_df[:1]) # returns predicted class labels
+# predicted label - print it
 predict
 
 # returns the class probabilities for each sample
 predict_propability = clf.predict_proba(full_df[:1])
-
+# class probabilities - print each probability
+predict_propability

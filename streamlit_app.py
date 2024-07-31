@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 # import numpy as np
 
 
@@ -107,3 +108,17 @@ with st.expander('**Data Preparation**'):
     st.divider()
     st.write('**Encoded Y / Target values**')
     Y_encoded
+
+
+# Model Training - Traing the model -> apply the model to make predictions
+# Initializing the classifier model
+clf = RandomForestClassifier()
+# remove row 1 from the full_df -> since it includes the input features
+X_encoded = full_df[1:]
+# fit the train and test sets .. which are X and Y respectively
+clf.fit(,Y_encoded)
+
+predict = clf.predict(input_df)
+predict_propability = clf.predict_proba(input_df)
+
+predict_propability

@@ -138,4 +138,4 @@ st.subheader("Predicted Species")
 df_predict_propability
 
 species=['Adelie','Gentoo','Chinstrap']
-st.success(str(species[prediction][0]))
+st.success(str(species[predict][0]))

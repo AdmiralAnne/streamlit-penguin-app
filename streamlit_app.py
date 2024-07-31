@@ -135,7 +135,32 @@ df_predict_propability.rename(columns={0: "Adelie",1 : "Gentoo", 2 : "Chinstrap"
 # Print out the predicted species
 st.subheader("Predicted Species")
 # df of probability class
-df_predict_propability
+# df_predict_propability
+
+st.dataframe(df_predict_propability,
+             column_config={
+               'Adelie': st.column_config.ProgressColumn(
+                 'Adelie',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+               'Chinstrap': st.column_config.ProgressColumn(
+                 'Chinstrap',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+               'Gentoo': st.column_config.ProgressColumn(
+                 'Gentoo',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+             }, hide_index=True)
 
 species=np.array(['Adelie','Gentoo','Chinstrap'])
 st.success(str(species[predict][0]))

@@ -48,10 +48,10 @@ with st.sidebar:
     # another one for gender / sex
     sex = st.selectbox('sex',('male','female'))
     # create a slider for the features
-    bill_length_mm = st.slider("Select bill_Length", min_value=30.0, max_value=60.0, value=45.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-    bill_depth_mm = st.slider("Select bill_depth", min_value=13.0, max_value=25.0, value=18.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-    flipper_length_mm = st.slider("Select flipper_length", min_value=172.0, max_value=231.0, value=200.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-    body_mass_g = st.slider("Select body_mass", min_value=2700.0, max_value=6200.0, value=4200.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+    bill_length_mm = st.slider("Select bill_Length", min_value=30.0, max_value=60.0, value=45.0, step=1, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+    bill_depth_mm = st.slider("Select bill_depth", min_value=13.0, max_value=25.0, value=18.0, step=1, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+    flipper_length_mm = st.slider("Select flipper_length", min_value=172.0, max_value=231.0, value=200.0, step=1, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+    body_mass_g = st.slider("Select body_mass", min_value=2700.0, max_value=6200.0, value=4200.0, step=1, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
 
     # create df for input features -> whatever we have selected on the sliders and boxes
     # name the new df as "inpput_data" -> First Create a dictionary called data with all the key:value pairs
@@ -76,12 +76,12 @@ full_df = pd.get_dummies(full_df, prefix=encode)
 input_row = full_df[:1] # select all columns, but select only 1st row
 
 with st.expander('**Input Data**'):
-    st.write('Selected values only')
+    st.write('**Selected values only**')
     input_df
     st.divider()
-    st.write('dataframe with Features and Selected values')
+    st.write('**dataframe with Features and Selected values**')
     full_df
     st.divider()
-    st.write('encoded input values df')
+    st.write('**encoded input values df**')
     input_row
     

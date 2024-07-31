@@ -34,3 +34,11 @@ with st.expander('**Data Visualization**'):
     st.write('body mass vs bill length')
     # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
     st.scatter_chart(data=df, x="bill_length_mm", y="body_mass_g", x_label="bill_length", y_label="body_mass", color='species', size=None, width=None, height=None, use_container_width=True)
+
+# some more data preparation
+# st.sidebar is as the name suggests -> used to create a sidebar that can store our widgets
+# species	island	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g	sex
+with st.sidebar:
+    st.header('Input Features')
+    # create a widget called island that will help us select a specific Island
+    island = st.selectionbox('island', ('Torgersen','Biscoe','Dream'))

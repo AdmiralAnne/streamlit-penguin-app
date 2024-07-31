@@ -10,5 +10,5 @@ st.info('This is a simple Machine Learning app that predicts species of a pengui
 # use st.write if you want to write normal texts instead of having the blue background
 
 # create a dataframe that stores the penguin data csv file -> already cleaned
-df = pd.read_csv("https://github.com/dataprofessor/data/blob/master/penguins_cleaned.csv")
+df = pd.read_csv("https://github.com/dataprofessor/data/penguins_cleaned.csv")
 df

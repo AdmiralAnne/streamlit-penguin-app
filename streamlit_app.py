@@ -19,7 +19,7 @@ with st.expander('**Data**'):
 
     # divide the data into x and y -> features vs Label
     # lets make x first -> which is the dataset without the species feature
-    st.write(feature_set)
+    st.write('**feature_set**')
     # create a variable x that stores the featurset
     X = df.drop('species', axis=1)
     X

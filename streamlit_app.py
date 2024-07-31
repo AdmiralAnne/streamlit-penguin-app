@@ -116,7 +116,7 @@ X_train
 clf = RandomForestClassifier()
 # remove row 1 from the full_df -> since it includes the input features
 # fit the train and test sets .. which are X and Y respectively
-clf.fit(X_encoded,Y_encoded)
+clf.fit(X_train,Y_encoded)
 
 predict = clf.predict(input_df)
 predict_propability = clf.predict_proba(input_df)

@@ -134,5 +134,5 @@ df_predict_propability.rename(columns={0: "Adelie",1 : "Gentoo", 2 : "Chinstrap"
 # df_predict_propability
 
 # Print out the predicted species
-st.st.header(Predicted Species)
+st.st.header("Predicted Species")
 st.info(df_predict_propability[predict])

@@ -12,23 +12,27 @@ st.info('This is a simple Machine Learning app that predicts species of a pengui
 # add an expander -> Like a toggle button that expands upon clicking
 with st.expander('**Data**'):
     # add a title for this dataframe that's being displayed
-    st.write('Raw Data csv')
+    st.write('**Raw Data csv**')
     # create a dataframe that stores the penguin data csv file -> already cleaned
     df = pd.read_csv("penguins_cleaned.csv")
     df
-
+    st.divider()
+    
     # divide the data into x and y -> features vs Label
     # lets make x first -> which is the dataset without the species feature
     st.write('**feature_set**')
     # create a variable x that stores the featurset
     X = df.drop('species', axis=1)
     X
+    st.divider()
+    
     # y will be just the species feature column i.e our label
     st.write('**Labels (what we wanna predict)**')
     # create a variable y that stores the featurset
     Y = df['species'] # alternately you can use df.species
     # always remember to print y
     Y
+    st.divider()
 
 with st.expander('**Data Visualization**'):
     st.write('body mass vs bill length')
@@ -71,5 +75,5 @@ with st.expander('**Input Data**'):
     st.write('dataframe with Features and Selected values')
     full_df
 
-# encoding since some data is Strng
+# encoding since some data is String 
 encode = ['island', 'sex']

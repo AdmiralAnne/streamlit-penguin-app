@@ -1,25 +1,27 @@
-# 📦 Streamlit App Starter Kit 
+# 🐧 Streamlit Penguin Species Prediction App 🐧
+
 ```
-⬆️ (Replace above with your app's name)
+this is a comment. Uhm.. nothing much to comment here
 ```
 
 Description of the app ...
 
-## Demo App
+## Click on Link to open application
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit-penguin-app.streamlit.app/)
 
 ## GitHub Codespaces
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
 
-## Section Heading
+## Coming soon
 
 This is filler text, please replace this with text for this section.
 
 ## Further Reading
 
 This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+
+-   Resource 1
+-   Resource 2
+-   Resource 3

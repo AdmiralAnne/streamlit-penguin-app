@@ -122,13 +122,12 @@ clf.fit(X_train,Y_encoded)
 predict = clf.predict(full_df[:1]) # returns predicted class labels
 # predicted label - print it
 predict
-
 # returns the class probabilities for each sample
 predict_propability = clf.predict_proba(full_df[:1])
 # class probabilities - print each probability
 predict_propability
 
 # convert into a dataframe and then change column names
-df_predict_propability = pd.DataFrame(predict_probability)
-df_predict_propability.rename(columns={'0':Adelie, '1':Gentoo, '2':Chinstrap})
-df_predict_propability
+df_predict_propability = pd.DataFrame(predict_propability)
+#df_predict_propability.rename(columns={'0':Adelie, '1':Gentoo, '2':Chinstrap})
+#df_predict_propability

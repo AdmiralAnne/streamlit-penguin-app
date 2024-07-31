@@ -41,4 +41,4 @@ with st.expander('**Data Visualization**'):
 with st.sidebar:
     st.header('Input Features')
     # create a widget called island that will help us select a specific Island
-    island = st.selectionbox('island', ('Torgersen','Biscoe','Dream'))
+    island = st.selectbox('island', ('Torgersen','Biscoe','Dream'))

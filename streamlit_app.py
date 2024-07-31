@@ -40,5 +40,7 @@ with st.expander('**Data Visualization**'):
 # species	island	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g	sex
 with st.sidebar:
     st.header('Input Features')
-    # create a widget called island that will help us select a specific Island
+    # create a var that stores the select box called island that will help us select a specific Island
     island = st.selectbox('island', ('Torgersen','Biscoe','Dream'))
+    # another one for gender / sex
+    sex = st.selectbox('sex',('male','female'))

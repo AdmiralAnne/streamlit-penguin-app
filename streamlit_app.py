@@ -7,7 +7,7 @@ import numpy as np
 # giving a title to the application
 st.title('🐧Penguin Species Prediction App')
 
-st.info('Mobile Devices - top right corner - sidebar - input selectiors')
+st.info('Mobile Devices - ↖️top_left_corner - sidebar - input selectiors')
 
 st.info('A simple Machine Learning app that predicts species of a penguin based on key features. (Using Random Forest Classifier)')
 # use st.write if you want to write normal texts instead of having the blue background

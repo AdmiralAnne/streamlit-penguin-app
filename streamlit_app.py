@@ -129,7 +129,7 @@ predict_propability
 
 # convert into a dataframe and then change column names
 df_predict_propability = pd.DataFrame(predict_propability)
-df_predict_propability.rename(columns={0:'Adelie',
+df_predict_propability.rename(columns={'0':'Adelie',
                                        1:'Gentoo',
                                        2:'Chinstrap'})
 df_predict_propability

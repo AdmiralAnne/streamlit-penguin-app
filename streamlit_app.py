@@ -45,4 +45,4 @@ with st.sidebar:
     # another one for gender / sex
     sex = st.selectbox('sex',('male','female'))
     # create a slider for the features
-    bill_length_mm = st.slider("Select Bill Length", min_value=0.0, max_value=50.0, value=25.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
+    bill_length_mm = st.slider("Select Bill Length", min_value=0.0, max_value=50.0, value=25.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")

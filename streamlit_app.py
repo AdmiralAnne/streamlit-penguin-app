@@ -112,13 +112,16 @@ with st.expander('**Data Preparation**'):
 
 X_train
 # Model Training - Traing the model -> apply the model to make predictions
-# Initializing the classifier model
+# initialize a RandomForestClassifier object named clf
 clf = RandomForestClassifier()
 # remove row 1 from the full_df -> since it includes the input features
-# fit the train and test sets .. which are X and Y respectively
+# Fitting the Model -  training data containing the input features, encoded labels (or target values) corresponding to the training data
 clf.fit(X_train,Y_encoded)
+# Making Predictions
+# make predictions on a subset of full_df -> in this case -> our input features, which are encoded
+predict = clf.predict(full_df[:1]) # returns predicted class labels
+predict
 
-predict = clf.predict(full_df[:1])
+# returns the class probabilities for each sample
 predict_propability = clf.predict_proba(full_df[:1])
 
-predict_propability

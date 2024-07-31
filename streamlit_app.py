@@ -24,3 +24,6 @@ with st.expander('**Data**'):
     X = df.drop('species', axis=1)
     X
     # y will be just the species feature column i.e our label
+    st.write('**Labels (what we wanna predict)**')
+    # create a variable y that stores the featurset
+    Y = df['species'] 

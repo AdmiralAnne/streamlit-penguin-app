@@ -65,7 +65,7 @@ input_df = pd.DataFrame(data, index=[0])
 full_df = pd.concat([input_df,X], axis=0)
 
 # lets add these two in an expander
-with st.expander('Input Data'):
+with st.expander('**Input Data**'):
     st.write('Selected values only')
     input_df
     st.write('dataframe with Features and Selected values')

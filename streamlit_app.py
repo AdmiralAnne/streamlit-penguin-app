@@ -127,3 +127,7 @@ predict
 predict_propability = clf.predict_proba(full_df[:1])
 # class probabilities - print each probability
 predict_propability
+
+# convert into a dataframe and then change column names
+df_predict_propability = pd.DataFrame(predict_probability, columns=['Adelie', 'Gentoo', 'Chinstrap'])
+df_predict_propability

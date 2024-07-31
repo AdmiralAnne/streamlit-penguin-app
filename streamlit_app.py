@@ -121,14 +121,18 @@ clf.fit(X_train,Y_encoded)
 # make predictions on a subset of full_df -> in this case -> our input features, which are encoded
 predict = clf.predict(full_df[:1]) # returns predicted class labels
 # predicted label - print it
-predict
+# predict
 # returns the class probabilities for each sample
 predict_propability = clf.predict_proba(full_df[:1])
 # class probabilities - print each probability
-predict_propability
+# predict_propability
 
 # convert into a dataframe and then change column names
 df_predict_propability = pd.DataFrame(predict_propability)
 df_predict_propability.columns=['Adelie','Gentoo','Chinstrap']
 df_predict_propability.rename(columns={0: "Adelie",1 : "Gentoo", 2 : "Chinstrap"})
-df_predict_propability
+# df_predict_propability
+
+# Print out the predicted species
+st.st.header(Predicted Species)
+st.info(df_predict_propability[predict])

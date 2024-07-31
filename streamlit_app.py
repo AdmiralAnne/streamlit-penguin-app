@@ -64,26 +64,19 @@ data = {'island':island,
         'body_mass_g':body_mass_g,
         'sex':sex,
         }
+
 input_df = pd.DataFrame(data, index=[0])
 # create a new data frame where we concatinate the old df (X-> features) and the new one(selected inputs)
 full_df = pd.concat([input_df,X], axis=0)
 # add these two to expander later
 
+# Encode X
 # encoding since some data is String -> convert categorical to numberic using - dummies
 encode = ['island', 'sex']
 # add some encoded data as new columns
 full_df = pd.get_dummies(full_df, prefix=encode)
 # but keep in mind, we only want the input row -> so, we'll select and print only the first row
 input_row = full_df[:1] # select all columns, but select only 1st row
-
-# Encode Y
-target_mapper = {
-    'Adelie':0,
-    'Gentoo':1,
-    'Chinstrap':2,
-}
-
-
 
 with st.expander('**Input Data**'):
     st.write('**Selected values from input features**')
@@ -94,4 +87,19 @@ with st.expander('**Input Data**'):
     st.divider()
     st.write('**Encoded input values df**')
     input_row
-    
+
+# Encode Y
+target_mapper = {
+    'Adelie':0,
+    'Gentoo':1,
+    'Chinstrap':2,
+}
+# convet the Species to numeric format now
+# since our target is the "species" feature -> we will call this encoder fn "target_encoder"
+def target_encoder(val):
+    # here we will use the target mapper
+    return target_mapper[val]
+
+# lets do the conversion here on a new dataframe called.. Y_encoded
+Y_encoded = Y.apply(target_encoder)
+Y_encoded

@@ -84,8 +84,7 @@ with st.expander('**Input Data**'):
     st.divider()
     st.write('**Features and Selected values**')
     full_df
-    st.divider()
-
+    
 # Encode Y
 target_mapper = {
     'Adelie':0,
@@ -105,5 +104,6 @@ Y_encoded = Y.apply(target_encoder)
 with st.expander('**Data Preparation**'):
     st.write('**Encoded input values df**')
     input_row
+    st.divider()
     st.write('**Encoded Y / Target values**')
     Y_encoded

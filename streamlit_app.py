@@ -53,12 +53,13 @@ with st.sidebar:
     # create df for input features -> whatever we have selected on the sliders and boxes
     # name the new df as "inpput_data" -> First Create a dictionary called data with all the key:value pairs
     # follow the format column_name:value and so on
-    data = {'island':island,
-           'bill_length_mm':bill_length_mm,
-           'bill_depth_mm':bill_depth_mm,
-           'flipper_length_mm':flipper_length_mm,
-           'body_mass_g':body_mass_g,
-           'sex':sex,
-           }
-    input_df = pd.DataFrame(data, index=[0])
-    input_df
+data = {'island':island,
+        'bill_length_mm':bill_length_mm,
+        'bill_depth_mm':bill_depth_mm,
+        'flipper_length_mm':flipper_length_mm,
+        'body_mass_g':body_mass_g,
+        'sex':sex,
+        }
+input_df = pd.DataFrame(data, index=[0])
+
+

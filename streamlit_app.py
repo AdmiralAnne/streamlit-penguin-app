@@ -78,3 +78,6 @@ with st.expander('**Input Data**'):
 
 # encoding since some data is String 
 encode = ['island', 'sex']
+# add some encoded data as new columns
+full_df = pd.get_dummies(full_df, prefix=encode)
+full_df

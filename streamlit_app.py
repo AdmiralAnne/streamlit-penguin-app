@@ -49,3 +49,16 @@ with st.sidebar:
     bill_depth_mm = st.slider("Select bill_depth", min_value=13.0, max_value=25.0, value=18.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
     flipper_length_mm = st.slider("Select flipper_length", min_value=172.0, max_value=231.0, value=200.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
     body_mass_g = st.slider("Select body_mass", min_value=2700.0, max_value=6200.0, value=4200.0, step=None, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+
+    # create df for input features -> whatever we have selected on the sliders and boxes
+    # name the new df as "inpput_data" -> First Create a dictionary called data with all the key:value pairs
+    # follow the format column_name:value and so on
+    data = {'island':island,
+           'bill_length_mm':bill_length_mm,
+           'bill_depth_mm':bill_depth_mm,
+           'flipper_length_mm':flipper_length_mm,
+           'body_mass_g':body_mass_g,
+           'sex':sex,
+           }
+    input_df = pd.DataFrame(data, index=[0])
+    input_df

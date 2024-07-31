@@ -131,8 +131,11 @@ predict_propability = clf.predict_proba(full_df[:1])
 df_predict_propability = pd.DataFrame(predict_propability)
 df_predict_propability.columns=['Adelie','Gentoo','Chinstrap']
 df_predict_propability.rename(columns={0: "Adelie",1 : "Gentoo", 2 : "Chinstrap"})
-# df_predict_propability
 
 # Print out the predicted species
-st.header("Predicted Species")
-st.info(df_predict_propability[predict])
+st.subheader("Predicted Species")
+# df of probability class
+df_predict_propability
+
+species=['Adelie','Gentoo','Chinstrap']
+st.success(str(species[prediction][0]))

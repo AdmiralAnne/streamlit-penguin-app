@@ -118,7 +118,7 @@ clf = RandomForestClassifier()
 # fit the train and test sets .. which are X and Y respectively
 clf.fit(X_train,Y_encoded)
 
-predict = clf.predict(input_df)
-predict_propability = clf.predict_proba(input_df)
+predict = clf.predict(full_df[:1])
+predict_propability = clf.predict_proba(full_df[:1])
 
 predict_propability

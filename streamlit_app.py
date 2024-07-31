@@ -38,7 +38,7 @@ with st.expander('**Data Visualization**'):
     # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
     st.scatter_chart(data=df, x="bill_length_mm", y="body_mass_g", x_label="bill_length", y_label="body_mass", color='species', size=None, width=None, height=None, use_container_width=True)
 
-# some more data preparation
+# Input Features
 # st.sidebar is as the name suggests -> used to create a sidebar that can store our widgets
 # species	island	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g	sex
 with st.sidebar:
@@ -53,9 +53,10 @@ with st.sidebar:
     flipper_length_mm = st.slider("Select flipper_length", min_value=172.0, max_value=231.0, value=200.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
     body_mass_g = st.slider("Select body_mass", min_value=2700.0, max_value=6200.0, value=4200.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
 
-    # create df for input features -> whatever we have selected on the sliders and boxes
-    # name the new df as "inpput_data" -> First Create a dictionary called data with all the key:value pairs
-    # follow the format column_name:value and so on
+# encoding data
+# create df for input features -> whatever we have selected on the sliders and boxes
+# name the new df as "inpput_data" -> First Create a dictionary called data with all the key:value pairs
+# follow the format column_name:value and so on
 data = {'island':island,
         'bill_length_mm':bill_length_mm,
         'bill_depth_mm':bill_depth_mm,
@@ -75,13 +76,22 @@ full_df = pd.get_dummies(full_df, prefix=encode)
 # but keep in mind, we only want the input row -> so, we'll select and print only the first row
 input_row = full_df[:1] # select all columns, but select only 1st row
 
+# Encode Y
+target_mapper = {
+    'Adelie':0,
+    'Gentoo':1,
+    'Chinstrap':2,
+}
+
+
+
 with st.expander('**Input Data**'):
-    st.write('**Selected values only**')
+    st.write('**Selected values from input features**')
     input_df
     st.divider()
-    st.write('**dataframe with Features and Selected values**')
+    st.write('**Features and Selected values**')
     full_df
     st.divider()
-    st.write('**encoded input values df**')
+    st.write('**Encoded input values df**')
     input_row
     

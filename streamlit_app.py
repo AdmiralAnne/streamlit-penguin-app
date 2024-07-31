@@ -32,7 +32,6 @@ with st.expander('**Data**'):
     Y = df['species'] # alternately you can use df.species
     # always remember to print y
     Y
-    st.divider()
 
 with st.expander('**Data Visualization**'):
     st.write('body mass vs bill length')
@@ -72,8 +71,10 @@ full_df = pd.concat([input_df,X], axis=0)
 with st.expander('**Input Data**'):
     st.write('Selected values only')
     input_df
+    st.divider()
     st.write('dataframe with Features and Selected values')
     full_df
+    st.divider()
 
 # encoding since some data is String 
 encode = ['island', 'sex']

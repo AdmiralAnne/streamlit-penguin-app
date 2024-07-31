@@ -129,5 +129,6 @@ predict_propability = clf.predict_proba(full_df[:1])
 predict_propability
 
 # convert into a dataframe and then change column names
-df_predict_propability = pd.DataFrame('predict_probability', columns=['Adelie', 'Gentoo', 'Chinstrap'])
+df_predict_propability = pd.DataFrame(predict_probability)
+df_predict_propability.rename(columns=['Adelie', 'Gentoo', 'Chinstrap'])
 df_predict_propability

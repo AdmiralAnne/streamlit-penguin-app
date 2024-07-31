@@ -27,3 +27,4 @@ with st.expander('**Data**'):
     st.write('**Labels (what we wanna predict)**')
     # create a variable y that stores the featurset
     Y = df['species'] 
+    Y

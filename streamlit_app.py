@@ -26,5 +26,10 @@ with st.expander('**Data**'):
     # y will be just the species feature column i.e our label
     st.write('**Labels (what we wanna predict)**')
     # create a variable y that stores the featurset
-    Y = df['species'] 
+    Y = df['species'] # alternately you can use df.species
+    # always remember to print y
     Y
+
+with st.expander('**Data Visualization**'):
+    # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
+    st.scatter_chart(data=df, *, x=bill_length_mm, y=body_mass_g, x_label=bill_length, y_label=body_mass, color='species', size=None, width=None, height=None, use_container_width=True)

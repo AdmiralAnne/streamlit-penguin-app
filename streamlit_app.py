@@ -21,6 +21,6 @@ with st.expander('**Data**'):
     # lets make x first -> which is the dataset without the species feature
     st.write(feature_set)
     # create a variable x that stores the featurset
-    X = df.drop['species',axis=1]
+    X = df.drop('species', axis=1)
     X
     # y will be just the species feature column i.e our label

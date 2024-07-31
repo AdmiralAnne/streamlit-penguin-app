@@ -102,4 +102,10 @@ def target_encoder(val):
 
 # lets do the conversion here on a new dataframe called.. Y_encoded
 Y_encoded = Y.apply(target_encoder)
-Y_encoded
+
+# another expander called data prep with the encoded values
+with st.expander('**Data Preparation**'):
+    st.write('**Encoded input values df**')
+    input_row
+    st.write('**Encoded Y / Target values**')
+    Y_encoded

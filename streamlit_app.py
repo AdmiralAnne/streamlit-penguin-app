@@ -137,5 +137,5 @@ st.subheader("Predicted Species")
 # df of probability class
 df_predict_propability
 
-species=np.array['Adelie','Gentoo','Chinstrap']
+species=np.array(['Adelie','Gentoo','Chinstrap'])
 st.success(str(species[predict][0]))
